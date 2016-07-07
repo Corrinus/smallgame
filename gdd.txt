@@ -1,0 +1,19 @@
+High Concept:
+3rd Person object dodging game using two buttons to avoid obstacles that fly at your from a forward direction in 3 dimensions.
+
+Story:
+None atm
+
+Controls:
+Two buttons (or left or right side of a screen on mobile platforms) to move laterally (left or right)
+
+Obstacles:
+Cubes, Spheres, Pyramids, Cones
+
+Level Variations:
+Inside of a tube?
+
+Notes:
+Would like 2D elements as well as 3D. Maybe main character will be sprite.
+
+Weapons?
