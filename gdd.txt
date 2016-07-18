@@ -8,7 +8,7 @@ Controls:
 Two buttons (or left or right side of a screen on mobile platforms) to move laterally (left or right)
 
 Obstacles:
-Cubes, Spheres, Pyramids, Cones
+Cubes, Spheres, Pyramids, Cones, Cylinders
 
 Level Variations:
 Inside of a tube?
