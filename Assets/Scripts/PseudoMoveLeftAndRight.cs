@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PseudoMoveLeftAndRight : MonoBehaviour {
 
-    public float speed = 1.0f;
+    public float modifier = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +12,6 @@ public class PseudoMoveLeftAndRight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<Renderer>().material.mainTextureOffset += Vector2.right * Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        GetComponent<Renderer>().material.mainTextureOffset += Vector2.right * Input.GetAxis("Horizontal") * GameManager.instance.gameSpeed * Time.deltaTime * modifier;
     }
 }
