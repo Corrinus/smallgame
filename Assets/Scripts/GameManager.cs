@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private float score = 0.0f;
 
     private static float highScore = 0.0f;
+    private static bool hasSaved = false;
 
     public float pointsPerUnitTravelled = 1.0f;
     public float gameSpeed = 10.0f;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
 	void Start ()
     {
         instance = this;
+        LoadHighScore();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +27,11 @@ public class GameManager : MonoBehaviour
 	    if(GameObject.FindGameObjectWithTag("Player") == null)
         {
             gameOver = true;
+            if (!hasSaved)
+            {
+                SaveHighScore();
+                hasSaved = true;
+            }
         }
 
         if (gameOver)
@@ -41,9 +48,21 @@ public class GameManager : MonoBehaviour
             if (score > highScore)
             {
                 highScore = score;
+                hasSaved = false;
             }
         }
 	}
+
+    void SaveHighScore()
+    {
+        PlayerPrefs.SetInt("HighScore", (int)highScore);
+        PlayerPrefs.Save();
+    }
+
+    void LoadHighScore()
+    {
+        highScore = PlayerPrefs.GetInt("HighScore");
+    }
 
     void OnGUI()
     {
