@@ -11,8 +11,6 @@ GameObject:
   - 33: {fileID: 3315984}
   - 136: {fileID: 13691606}
   - 23: {fileID: 2338384}
-  - 114: {fileID: 11457082}
-  - 114: {fileID: 11430344}
   - 54: {fileID: 5475318}
   m_Layer: 0
   m_Name: Pillar
@@ -30,6 +28,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 469010}
   - 114: {fileID: 11450320}
+  - 114: {fileID: 11444514}
+  - 114: {fileID: 11435404}
   m_Layer: 0
   m_Name: PillarParent
   m_TagString: Untagged
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 155126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 0, z: 1}
+  m_LocalScale: {x: 2, y: 0, z: 2}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 459896}
@@ -112,18 +112,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11430344
+--- !u!114 &11435404
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103278}
+  m_GameObject: {fileID: 155126}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fd64a005cd8e734bb2e9df43c43e091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyValue: -50
+  destroyValue: -8
+--- !u!114 &11444514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211dec86ae5e92a42b0b84acb57ef22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -10
+  speedz: -10
 --- !u!114 &11450320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,19 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalScale: {x: 1, y: 10, z: 1}
   time: 1
---- !u!114 &11457082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211dec86ae5e92a42b0b84acb57ef22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -10
-  speedz: -10
 --- !u!136 &13691606
 CapsuleCollider:
   m_ObjectHideFlags: 1
